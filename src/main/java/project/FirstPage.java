@@ -23,7 +23,7 @@ public class FirstPage extends BaseSeleniumPage {
         PageFactory.initElements(driver, this);
     }
 
-    public FirstPage loginInEmail(String email, String password){
+    public MainPage loginInEmail(String email, String password){
 
         firstEnterButton.click();
 
@@ -46,6 +46,6 @@ public class FirstPage extends BaseSeleniumPage {
 
         WebElement buttonToLogin = driver.findElement(By.xpath("//button[@data-test-id='submit-button']"));
         buttonToLogin.click();
-        return this;
+        return new MainPage();
     }
 }
